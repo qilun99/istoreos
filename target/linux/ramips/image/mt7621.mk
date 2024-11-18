@@ -279,6 +279,16 @@ define Device/beeline_smartbox-flash
 endef
 TARGET_DEVICES += beeline_smartbox-flash
 
+define Device/jdcloud_re-sp-01b
+  $(Device/dsa-migration)
+  IMAGE_SIZE := 27328k
+  DEVICE_VENDOR := JDCloud
+  DEVICE_MODEL := RE-SP-01B
+  DEVICE_PACKAGES := kmod-fs-ext4 kmod-mt7603 kmod-mt7615e \
+	kmod-mt7615-firmware kmod-sdhci-mt7620 kmod-usb3
+endef
+TARGET_DEVICES += jdcloud_re-sp-01b
+
 define Device/buffalo_wsr-1166dhp
   $(Device/dsa-migration)
   $(Device/uimage-lzma-loader)
